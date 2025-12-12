@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(composer install:*)",
+      "Bash(php:*)",
+      "Bash(chmod:*)",
+      "Bash(ls:*)",
+      "Bash(wsl php:*)",
+      "Bash(wsl composer:*)",
+      "Bash(if [ ! -f \".env\" ])",
+      "Bash(then wsl cp .env.example .env)",
+      "Bash(else echo \"✅ .env文件已存在\")",
+      "Bash(fi)",
+      "Bash(wsl grep:*)",
+      "Bash(wsl chmod:*)",
+      "Bash(wsl bash -c \"cd /mnt/h/Desktop/RUST/CRM_AI_V7 && php -S 0.0.0.0:6666 -t public/ > /tmp/debate_server.log 2>&1 &\")",
+      "Bash(wsl tail:*)",
+      "Bash(wsl bash -c \"netstat -tlnp 2>/dev/null | grep 6666 || ss -tlnp 2>/dev/null | grep 6666\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
